@@ -5,7 +5,6 @@ import {
     CardSubtitle, 
     CardText, 
     Col, 
-    Button
 } from "reactstrap";
 import './Poem.css'
 
@@ -14,38 +13,27 @@ const Poem = ({ poem }) => {
     return (
         <Col className="mb-3">
             <Card
-            className="text-start"
+            className="poem-card text-center mx-auto"
             style={{
                 padding: '.5rem',
                 height: '100%',
                 borderRadius: '1rem',
-                maxWidth: '20rem'
+                width: '75%'
             }}
             >
                 <CardBody>
-                    <CardTitle tag='h5'>
+                    <CardTitle tag='h4'>
                         {poem.title}
                     </CardTitle>
                     <CardSubtitle 
-                        className="mb-2 text-muted" 
-                        tag="h6"
+                        className="mb-3 text-muted" 
+                        tag="h5"
                     >
-                        by {poem.author}
+                        by <span style={{color: '#b56576'}}>{poem.author}</span>
                     </CardSubtitle>
                     <CardText>
-                        {poem.content}
+                        <pre>{poem.content}</pre>
                     </CardText>
-                    <Button 
-                        size="sm" 
-                        outline 
-                        style={{
-                            borderColor: '#6d597a',
-                            backgroundColor: '#6d597a',
-                            color: '#fff'
-                        }}
-                    >
-                        Comment
-                    </Button>
                 </CardBody>
             </Card>
         </Col>

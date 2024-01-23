@@ -41,6 +41,9 @@ function Header() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
+              <NavLink href="/poems">All Poems</NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink href="/poems">Submit a Poem</NavLink>
             </NavItem>
             <NavItem>

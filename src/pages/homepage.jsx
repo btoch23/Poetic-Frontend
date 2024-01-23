@@ -13,18 +13,27 @@ const Homepage = () => {
     const url = 'https://localhost:3443/poems';
 
     useEffect(() => {
-        fetch(url, options)
-            .then(response => response.json())
-            .then(json => setData(json))
-            .catch(err => console.error(err));
+        async function getData() {
+            try {
+                const response = await fetch(url, options);
+                const result = await response.text();
+                const jsonResult = JSON.parse(result);
+                setData(jsonResult);
+            }
+            catch(err) {
+                console.error(err);
+            }
+        }
+        getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
     
     return (
         <>
             <Header />
-            <Container>
-                <Row>
+            <Container fluid>
+                <h1 className="display-1 mb-5" style={{color: '#b56576'}}>Featured Poem</h1>
+                <Row xs='1'>
                 {data ?
                     data.map((poem) => {
                         if (poem.featured) {
