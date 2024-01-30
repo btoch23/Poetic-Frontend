@@ -31,9 +31,11 @@ const Poem = ({ poem }) => {
                     >
                         by <span style={{color: '#b56576'}}>{poem.author}</span>
                     </CardSubtitle>
-                    <CardText>
-                        <pre>{poem.content}</pre>
-                    </CardText>
+                    <pre>
+                        <CardText>
+                            {poem.content}
+                        </CardText>
+                    </pre>
                 </CardBody>
             </Card>
         </Col>

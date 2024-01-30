@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import Poem from "../components/poem";
-import { Row, Container } from "reactstrap";
 import Header from "../components/Header";
+import FeaturedPoem from "../components/FeaturedPoem";
 
 const Homepage = () => {
     const[data, setData] = useState(null);
@@ -10,7 +9,7 @@ const Homepage = () => {
         method: 'GET'
     };
 
-    const url = 'https://localhost:3443/poems';
+    const url = 'http://localhost:3000/poems';
 
     useEffect(() => {
         async function getData() {
@@ -26,47 +25,14 @@ const Homepage = () => {
         }
         getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data]);
+    }, []);
     
     return (
         <>
             <Header />
-            <Container fluid>
-                <h1 className="display-1 mb-5" style={{color: '#b56576'}}>Featured Poem</h1>
-                <Row xs='1'>
-                {data ?
-                    data.map((poem) => {
-                        if (poem.featured) {
-                            return (
-                                <Poem 
-                                    poem={poem}
-                                    key={poem.id}
-                                />
-                            )
-                        }
-                    })
-                    : <h1>Loading...</h1>
-                }
-            </Row>
-            </Container>
+            <FeaturedPoem poems={data} />
         </>
     )
-
-//    if (data) {
-//         for (let d of data) {
-//             return (
-//                 <>
-//                     <h1>{d.title}</h1>
-//                     <p>{d.content}</p>
-//                 </>
-//             )
-//         }
-//     } else {
-//         return (
-//             <p>Loading...</p>
-//         )
-//     } 
-// }
 }
 
 export default Homepage;
