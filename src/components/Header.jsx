@@ -49,14 +49,6 @@ function Header() {
             <NavLink href="/about">About</NavLink>
           </NavItem>
         </Nav>
-        {/* <form className='d-flex' role='search'>
-          <input 
-            type="search" 
-            className='form-control me-2' 
-            placeholder='find a poem' 
-          />
-          <button className='btn btn-outline-light' type='submit'>Search</button>
-        </form> */}
         <NavbarText>
           <NavLink id='signUp' href='/signup'>
             Sign Up
