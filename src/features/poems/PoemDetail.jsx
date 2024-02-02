@@ -5,7 +5,7 @@ import './PoemCard.css';
 const PoemDetail = ({ poem }) => {
     return (
         <Col className="m-1">
-            <Card style={{padding: '0rem 5rem'}}className="poem-card text-center">
+            <Card style={{padding: '0rem 5rem'}}className="poem-card text-center mt-5">
                 <CardBody>
                     <CardTitle tag='h2'>
                             {poem.title}
