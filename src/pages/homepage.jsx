@@ -1,7 +1,7 @@
 import DisplayList from "../features/display/DisplayList";
 import { Container } from "reactstrap";
 
-const Homepage = () => {
+const HomePage = () => {
     return (
         <Container fluid>
             <DisplayList />
@@ -9,4 +9,4 @@ const Homepage = () => {
     )
 }
 
-export default Homepage;
+export default HomePage;

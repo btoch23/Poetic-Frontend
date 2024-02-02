@@ -14,7 +14,7 @@ const DisplayList = () => {
     return (
         <>
             <h1 className="display-1 mb-5">Featured Poem</h1>
-            <Row xs='1'>
+            <Row sm='1'>
                 {items.map((item, idx) => {
                     const { featuredItem, isLoading, errMsg } = item;
                     if (isLoading) {
