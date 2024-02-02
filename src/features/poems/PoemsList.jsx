@@ -1,5 +1,5 @@
 import { Col, Row } from "reactstrap";
-import Poem from "./Poem";
+import PoemCard from "./PoemCard";
 import { selectAllPoems } from "./poemsSlice";
 import { useSelector } from "react-redux";
 import Error from "../../components/Error";
@@ -33,10 +33,10 @@ const PoemsList = () => {
                 return (
                     <Col
                         md='5'
-                        className="m-4"
+                        className="m-3"
                         key={poem._id}
                     >
-                        <Poem poem={poem} />
+                        <PoemCard poem={poem} />
                     </Col>
                 )
             })}

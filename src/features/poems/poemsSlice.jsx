@@ -46,9 +46,9 @@ export const selectAllPoems = (state) => {
     return state.poems.poemsArray;
 };
 
-export const selectPoemsById = (id) => (state) => {
+export const selectPoemById = (id) => (state) => {
     return state.poems.poemsArray.find(
-        (poem) => poem._id === parseInt(id)
+        (poem) => poem._id === id
     );
 };
 

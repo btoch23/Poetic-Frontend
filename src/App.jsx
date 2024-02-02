@@ -7,6 +7,7 @@ import { fetchPoems } from './features/poems/poemsSlice';
 import { Routes, Route } from 'react-router-dom';
 import PoemsDirectoryPage from './pages/PoemsDirectory';
 import AboutPage from './pages/AboutPage';
+import PoemDetailPage from './pages/PoemDetailPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/poems' element={<PoemsDirectoryPage />} />
+          <Route path='/poems/:poemId' element={<PoemDetailPage />} />
           <Route path='/about' element={<AboutPage />} />
         </Routes>
     </div>

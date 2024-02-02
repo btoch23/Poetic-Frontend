@@ -3,7 +3,7 @@ import { selectFeaturedPoem } from "../poems/poemsSlice";
 import { useSelector } from "react-redux";
 import Error from '../../components/Error';
 import Loading from '../../components/Loading';
-import Poem from "../poems/Poem";
+import Poem from "../poems/PoemCard";
 
 const DisplayList = () => {
     const items = useSelector((state) => [

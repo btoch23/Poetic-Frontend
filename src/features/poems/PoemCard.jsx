@@ -3,24 +3,17 @@ import {
     CardBody, 
     CardTitle, 
     CardSubtitle, 
-    CardText, 
-    Col, 
 } from "reactstrap";
-import './Poem.css'
+import './PoemCard.css'
+import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
-const Poem = ({ poem }) => {
+const PoemCard = ({ poem }) => {
     return (
-        <Col className="mb-3">
+        <Link style={{textDecoration: 'none'}} to={`${poem._id}`}>
             <Card
-            key={poem._id}
-            className="poem-card text-center mx-auto"
-            style={{
-                padding: '.5rem',
-                height: '100%',
-                borderRadius: '1rem',
-                width: '75%'
-            }}
+                key={poem._id}
+                className="poem-card text-center mx-auto"
             >
                 <CardBody>
                     <CardTitle tag='h4'>
@@ -32,15 +25,16 @@ const Poem = ({ poem }) => {
                     >
                         by <span style={{color: '#b56576'}}>{poem.author}</span>
                     </CardSubtitle>
-                    <pre>
+                    {/* <pre>
                         <CardText>
                             {poem.content}
                         </CardText>
-                    </pre>
+                    </pre> */}
                 </CardBody>
             </Card>
-        </Col>
+        </Link>
+        
     )
 }
 
-export default Poem;
+export default PoemCard;
