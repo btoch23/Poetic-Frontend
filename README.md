@@ -1,6 +1,8 @@
 # Overview
 
 Poetic is a platform built with JavaScript and React to provide poets with a place to share and discuss their writing with fellow artists.
+<br>
+Back-End Repo: https://github.com/btoch23/Poetic-Backend
 
 # Technology Stack
 - **JavaScript**
