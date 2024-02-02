@@ -1,8 +1,15 @@
-# React + Vite
+# Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Poetic is a platform built with JavaScript and React to provide poets with a place to share and discuss their writing with fellow artists.
 
-Currently, two official plugins are available:
+# Technology Stack
+- **JavaScript**
+- **React**
+- **Redux**
+- **React Router**
+- **Bootstrap**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Contact Me
+email: brian.toch23@gmail.com 
+<br>
+linkedIn: https://www.linkedin.com/in/brian-tochterman-jr-991a1189/
