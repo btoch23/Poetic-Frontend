@@ -13,6 +13,7 @@ const Poem = ({ poem }) => {
     return (
         <Col className="mb-3">
             <Card
+            key={poem._id}
             className="poem-card text-center mx-auto"
             style={{
                 padding: '.5rem',
